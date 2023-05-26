@@ -28,9 +28,30 @@
               </label>
               <input type="file" accept="image/*" id="file-input" name="file" />
           </div>
-          <button id="grayscale-button" class="button" onclick="convertGrayscale()">Grayscale</button>
-          <button id="blur-button" class="button" onclick="applyBlur()">Gaussian Blur</button>
-          <button id="threshold-button" class="button" onclick="applyThreshold()">Threshold</button> 
+          <div class="thresholdTypeContainer">
+            <label for="thresholdTypeDropdown">Threshold Type:</label>
+            <select id="thresholdTypeDropdown">
+              <option value="0">Binary</option>
+              <option value="1">Binary Inverted</option>
+              <option value="2">Truncation</option>
+              <option value="3">To-Zero</option>
+              <option value="4">To-Zero Inverted</option>
+              <option value="7">Mask</option>
+              <option value="8">Otsu</option>
+              <option value="16">Triangle</option>
+              <!-- Add more threshold types as needed -->
+            </select>
+          </div>
+          <div>
+            <label for="upperThresholdSlider">Upper Threshold:</label>
+            <input type="range" id="upperThresholdSlider" min="0" max="255" value="255">
+            <span id="upperThresholdLabel"></span>
+          </div>
+          <div class="lowerSlider">
+            <label for="lowerThresholdSlider">Lower Threshold:</label>
+            <input type="range" id="lowerThresholdSlider" min="0" max="255" value="200">
+            <span id="lowerThresholdLabel"></span>
+          </div>
           <button id="detect-button" class="button" onclick="detect()">Detect Shapes</button> 
         </div>
     </div>

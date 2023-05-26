@@ -68,7 +68,7 @@ body {
 }
 
 .button {
-  margin-top: 10px;
+  margin-top: 2vh;
   padding: 10px;
   background-color: #4CAF50;
   color: #fff;
@@ -92,6 +92,7 @@ body {
   width: 200px;
   height: 50px;
   margin: 0 auto;
+  margin-bottom: 2vh;
   border: 2px dashed #ccc;
   border-radius: 10px;
   display: flex;
@@ -128,6 +129,57 @@ body {
   margin: 0;
   line-height: 1.5;
   text-transform: uppercase;
+}
+
+.lowerSlider {
+  margin-top: 1vh;
+}
+
+#lowerThresholdSlider,
+#upperThresholdSlider {
+  width: 100%;
+}
+
+#lowerThresholdLabel,
+#upperThresholdLabel {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.thresholdTypeContainer {
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#thresholdTypeDropdown {
+  width: 100%;
+  max-width: 200px;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: dashed;
+  border-color: #777;
+  background-color: #fff;
+  color: #555;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#thresholdTypeDropdown:hover {
+  background-color: #f1f1f1;
+}
+
+#output-canvas {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-top: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 768px) {
